@@ -1,10 +1,39 @@
 #+TITLE: Курс по Python
 #+AUTHOR: Штерн Павел
+#+FILETAGS: :python:logos:teaching:
 * Еженедельные занятия
 <2019-09-05 Чт 18:00-19:30 +1w>
 
 ww 36--52
 17 занятий
+* Outline 
+<2019-08-23 Fri 11:55>
+Что такое язык?
+Что такое язык программирования?
+Язык программирования \mdash это язык взаимодействия с компьютером.
+https://fivebooks.com/best-books/programming-computer-science-ana-bell/
+Где применяются языки программирования
+Какие вы знаете языки программирования?
+Языки программирования:
+- компилируемые
+  - C
+  - C++
+  - Go
+  - Rust
+- интерпретируемые
+  - Bash
+  - Perl
+  - JavaScript
+  - Python
+  - Scheme
+
+Python.
+Области применения:
+- Desktop applications (Qt for Python)
+- Web (Django, Flask)
+- Science (NumPy, Matplotlib)
+- Machine Learning (Tensorflow, scikit-learn)
+- Data Mining (pandas)
 * links
 - https://awesome-python.com/
 - https://ru.hexlet.io/courses/python-basics
