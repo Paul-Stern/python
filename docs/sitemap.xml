@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/tags/logos/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/tags/python/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/tags/teaching/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/posts/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/posts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/posts/plan/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>План занятий on Основы программирования на языке Python</title>
+    <link>https://paul-stern.github.io/python/posts/</link>
+    <description>Recent content in План занятий on Основы программирования на языке Python</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-RU</language>
+    
+	<atom:link href="https://paul-stern.github.io/python/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Курс по Python</title>
+      <link>https://paul-stern.github.io/python/posts/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://paul-stern.github.io/python/posts/python/</guid>
+      <description> Еженедельные занятия &amp;lt;2019-09-05 Thu 18:00 +1w&amp;gt;&amp;#x2013;&amp;lt;2019-09-05 Thu 19:30 +1w&amp;gt;
+ww 36&amp;ndash;52 17 занятий
+План занятий  Знакомство с инструментами разработки Переменные, выражения (expression) и инструкции (statements) Функции Условные выражения и рекурсия Полезные функции Итерация Строки Игры со словами Списки Словари Кортежи Выбор структуры данных Файлы Классы и объекты Классы и функции Классы и методы Наследование  links  https://awesome-python.com/ https://ru.hexlet.io/courses/python-basics https://code-basics.ru/languages/python https://www.ossblog.org/study-python-with-open-source-books/  https://docs.python-guide.org/ https://realpython.com/   </description>
+    </item>
+    
+    <item>
+      <title>План занятий</title>
+      <link>https://paul-stern.github.io/python/posts/plan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://paul-stern.github.io/python/posts/plan/</guid>
+      <description> Знакомство с инструментами разработки Переменные, выражения (expression) и инструкции (statements) Функции Условные выражения и рекурсия Полезные функции Итерация Строки Игры со словами Списки Словари Кортежи Выбор структуры данных Файлы Классы и объекты Классы и функции Классы и методы Наследование  </description>
+    </item>
+    
+  </channel>
+</rss>

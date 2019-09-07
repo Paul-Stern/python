@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logos on Основы программирования на языке Python</title>
+    <link>https://paul-stern.github.io/python/tags/logos/</link>
+    <description>Recent content in logos on Основы программирования на языке Python</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-RU</language>
+    
+	<atom:link href="https://paul-stern.github.io/python/tags/logos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>План занятий</title>
+      <link>https://paul-stern.github.io/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://paul-stern.github.io/python/</guid>
+      <description>Знакомство с инструментами разработки Переменные, выражения (expression) и инструкции (statements) Функции Условные выражения и рекурсия Полезные функции Итерация Строки Игры со словами Списки Словари Кортежи Выбор структуры данных Файлы Классы и объекты Классы и функции Классы и методы Наследование  Предупреждение В ходе курса его содержание может меняться</description>
+    </item>
+    
+    <item>
+      <title>План занятий</title>
+      <link>https://paul-stern.github.io/python/posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://paul-stern.github.io/python/posts/</guid>
+      <description> Знакомство с инструментами разработки Переменные, выражения (expression) и инструкции (statements) Функции Условные выражения и рекурсия Полезные функции Итерация Строки Игры со словами Списки Словари Кортежи Выбор структуры данных Файлы Классы и объекты Классы и функции Классы и методы Наследование  </description>
+    </item>
+    
+    <item>
+      <title>План занятий</title>
+      <link>https://paul-stern.github.io/python/posts/plan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://paul-stern.github.io/python/posts/plan/</guid>
+      <description> Знакомство с инструментами разработки Переменные, выражения (expression) и инструкции (statements) Функции Условные выражения и рекурсия Полезные функции Итерация Строки Игры со словами Списки Словари Кортежи Выбор структуры данных Файлы Классы и объекты Классы и функции Классы и методы Наследование  </description>
+    </item>
+    
+  </channel>
+</rss>
