@@ -1,0 +1,7 @@
+baseURL = "https://paul-stern.github.io/python/"
+languageCode = "ru-RU"
+defaultContentLanguage = "ru-RU"
+enableEmoji = "true"
+title = "Основы программирования на языке Python"
+theme = "custom"
+publishDir = "../docs/"
