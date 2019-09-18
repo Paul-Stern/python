@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Основы программирования на языке Python</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/python/reveal-js/css/reveal.css"><link rel="stylesheet" href="/python/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/python/highlight-js/default.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+<section>
+
+<h2 id="основы-программирования-на-языке-python">Основы программирования на языке Python</h2>
+
+</section><section>
+
+<h3 id="занятие-1">Занятие № 1</h3>
+
+<p>Общие сведения и инструменты разработки</p>
+
+</section><section>
+
+<p>Видели ли Вы код на Python?</p>
+
+</section><section>
+
+<p>Фрагмент random.py:</p>
+
+<pre><code class="language-python">def triangular(self, low=0.0, high=1.0, mode=None):
+    &quot;&quot;&quot;Triangular distribution.
+
+    Continuous distribution bounded by given lower and upper limits,
+    and having a given mode value in-between.
+
+    http://en.wikipedia.org/wiki/Triangular_distribution
+
+    &quot;&quot;&quot;
+    u = self.random()
+    try:
+	c = 0.5 if mode is None else (mode - low) / (high - low)
+    except ZeroDivisionError:
+	return low
+    if u &gt; c:
+	u = 1.0 - u
+	c = 1.0 - c
+	low, high = high, low
+    return low + (high - low) * (u * c) ** 0.5
+</code></pre>
+
+</section><section>
+
+<p>Код может выглядеть по-разному.</p>
+
+</section><section>
+
+<p>Фрагмент filedialog.py:</p>
+
+<pre><code class="language-python">class Directory(commondialog.Dialog):
+    &quot;Ask for a directory&quot;
+
+    command = &quot;tk_chooseDirectory&quot;
+
+    def _fixresult(self, widget, result):
+	if result:
+	    # convert Tcl path objects to strings
+	    try:
+		result = result.string
+	    except AttributeError:
+		# it already is a string
+		pass
+	    # keep directory until next time
+	    self.options[&quot;initialdir&quot;] = result
+	self.directory = result # compatibility
+	return result
+</code></pre>
+
+</section><section>
+
+<p>В чем разница между этими двумя блоками кода?</p>
+
+</section><section>
+
+<p>Что такое программирование?</p>
+
+</section><section>
+
+<p>В общем смысле, это способ взаимодействия с компьютером.</p>
+
+</section><section>
+
+<p>Какие знания и умения необходимы для овладения программированием?</p>
+
+</section><section>
+
+<ul>
+<li>Математические знания</li>
+<li>Владение навыками алгоритмического мышления</li>
+<li>Владение ИКТ
+
+<ul>
+<li>Компьютером</li>
+<li>Интернетом</li>
+</ul></li>
+<li>Владение английским языком</li>
+</ul>
+
+</section><section>
+
+<h4 id="языки-программирования">Языки программирования</h4>
+
+</section><section>
+
+<p>Какими бывают языки программирования? На какие 2 группы их можно поделить?</p>
+
+</section><section>
+
+<p>Языки программирования:</p>
+
+<ul>
+<li>компилируемые</li>
+<li>интерпретируемые</li>
+</ul>
+
+</section><section>
+
+<p>Компилируемые языки:</p>
+
+<p>Исходный код → исполняемый код → исполнение</p>
+
+<p>Среди них:</p>
+
+<ul>
+<li>C</li>
+<li>C++</li>
+<li>Go</li>
+<li>Rust</li>
+</ul>
+
+</section><section>
+
+<p>Интерпретируемые языки:</p>
+
+<p>Исходный код → исполнение (интерпретатором)</p>
+
+<p>Среди них:</p>
+
+<ul>
+<li>JavaScript</li>
+<li>Bash</li>
+<li>PHP</li>
+</ul>
+
+</section><section>
+
+<p>Как вы думаете, к каким относится Python?</p>
+
+</section><section>
+
+<p>Python &mdash; интерпретируемый язык</p>
+
+</section><section>
+
+<p>Короткие программы на интерпретируемых языках называют <em>скриптами</em></p>
+
+</section><section>
+
+<h4 id="эволюция-языка">Эволюция языка</h4>
+
+<p>Версии языка</p>
+
+</section><section>
+
+<p>Зачем выпускать новые версии языка?</p>
+
+</section><section>
+
+<p>Чтобы:</p>
+
+<ul>
+<li>исправить ошибки</li>
+<li>улучшить производительность</li>
+<li>обогатить язык средствами выразительности</li>
+</ul>
+
+</section><section>
+
+<ul>
+<li>0.9.0 &mdash; 1991</li>
+<li>1.0 &mdash; 1994</li>
+<li>2.0 &mdash; 2000
+
+<ul>
+<li>2.1 &mdash; 2001</li>
+<li>&hellip;</li>
+<li>2.7 &mdash; 2010
+
+<ul>
+<li>&hellip;</li>
+<li>2.7.16 &mdash; 2019</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</section><section>
+
+<ul>
+<li>3.0 &mdash; 2008</li>
+<li>&hellip;</li>
+<li>3.7 &mdash; 2018</li>
+<li>3.7.4 &mdash; 2019</li>
+</ul>
+
+</section><section>
+
+<p>Заметили что-нибудь необычное?</p>
+
+</section><section>
+
+<p>Почему версии 2.7+ и 3+ существуют параллельно?</p>
+
+</section><section>
+
+<h4 id="рейтинг-языка">Рейтинг языка</h4>
+
+<p>Python входит в пятерку лучших языков по разным рейтингам, например, <a href="https://www.tiobe.com/tiobe-index/">TIOBE</a> и <a href="https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted">StackOverflow</a>.</p>
+
+</section><section>
+
+<p>С чем это может быть связано?</p>
+
+</section><section>
+
+<h4 id="the-zen-of-python--выдержка">The Zen of Python (выдержка)</h4>
+
+<ol>
+<li>Beautiful is better than ugly.</li>
+<li>Explicit is better than implicit.</li>
+<li>Simple is better than complex.</li>
+<li>Complex is better than complicated.</li>
+<li>&hellip;</li>
+<li>&hellip;</li>
+<li>Readability counts.</li>
+</ol>
+
+<p>&hellip;</p>
+
+</section><section>
+
+<h4 id="инструменты-разработки">Инструменты разработки</h4>
+
+<ul>
+<li>Интерпретатор
+
+<ul>
+<li>Python</li>
+<li>IPython</li>
+</ul></li>
+
+<li><p>Текстовый редактор</p>
+
+<ul>
+<li>IDLE</li>
+<li>Emacs / Vim</li>
+<li>VSCode</li>
+</ul>
+
+<p>Jupyter Notebooks</p></li>
+</ul>
+
+</section><section>
+
+<h4 id="установка-python">Установка Python</h4>
+
+<p>Текущую версию языка для 64-битного Windows можно найти по ссылке: <a href="https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe">https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe</a></p>
+
+<p>Другие платформы: <a href="https://www.python.org/downloads/release/python-374/">https://www.python.org/downloads/release/python-374/</a></p>
+
+</section><section>
+
+<p>Приступим!</p>
+
+</section><section>
+
+<h4 id="примеры-программ">Примеры программ</h4>
+
+<pre><code class="language-python">print('x * 4 =', int(input('x = ')) * 4)
+</code></pre>
+
+</section><section>
+
+<pre><code class="language-python">print('Первый отрезок + 4см = ', int(input('Первый отрезок = (в см) ')) + 4, 'см')
+</code></pre>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/python/reveal-hugo/object-assign.js></script>
+
+<a href="/python/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/python/reveal-js/lib/js/head.min.js"></script>
+<script src="/python/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+<script type="text/javascript" src="/python/reveal-js/lib/js/classList.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/marked.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/markdown.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/highlight/highlight.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/zoom-js/zoom.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+<script type="text/javascript">
+if (hljs)
+  hljs.initHighlightingOnLoad();
+</script>
+    
+    
+  </body>
+</html>

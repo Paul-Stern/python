@@ -3,5 +3,9 @@ languageCode = "ru-RU"
 defaultContentLanguage = "ru-RU"
 enableEmoji = "true"
 title = "Основы программирования на языке Python"
-theme = "custom"
+theme = ["custom", "reveal-hugo"]
 publishDir = "../docs/"
+
+[outputFormats.Reveal]
+mediaType = "text/html"
+isHTML = true
