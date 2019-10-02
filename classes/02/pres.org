@@ -1,0 +1,146 @@
+#+HUGO_BASE_DIR: ../../site/
+#+HUGO_SECTION: ./reveal/02
+#+EXPORT_FILE_NAME: _index.md
+#+HUGO_MENU: :reveal_hugo
+#+HUGO_CUSTOM_FRONT_MATTER: :outputs "Reveal"
+
+* Занятие №2
+Переменные, выражения, инструкции
+
+---
+
+** Текстовый редактор
+- https://www.slant.co/topics/12/~best-programming-text-editors
+- https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
+- https://github.com/collections/text-editors
+# - https://octoverse.github.com/
+
+---
+
+- VS Code
+- Atom
+- Emacs
+- Vim
+
+---
+
+** Значения, выражения и инструкции
+
+*Структура кода:*
+
+инструкции
+
+↑
+
+выражения
+
+↑
+
+значения, переменные и операторы
+
+---
+
+** Документация
+https://docs.python.org/3/index.html
+
+Главные разделы: 
+- What's new
+- Library Reference
+- Language Reference
+
+---
+
+** Значения
+https://docs.python.org/3/reference/datamodel.html#objects-values-and-types
+
+#+BEGIN_QUOTE
+An object’s type \dots defines the possible values for objects of that type.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+The value of some objects can change.
+#+END_QUOTE
+
+
+
+---
+
+** Выражения
+https://docs.python.org/3/reference/expressions.html
+
+
+
+---
+
+** Инструкции
+https://docs.python.org/3/reference/simple_stmts.html#simple-statements
+
+---
+
+** Инструкция присваивания (assignment statement)
+https://docs.python.org/3/reference/simple_stmts.html#assignment-statements
+
+Инструкция присваивания создает переменную и /присваивает/ ей значение.
+
+=имя_переменной = значение= 
+
+По правилам составления имен см. PEP8.
+
+---
+
+#+BEGIN_SRC python
+  help_message = 'Если Вы хотите прервать выполнение программы, '
+		 + 'то нажмите Ctrl-C'
+  height = 10
+  width = 5.5
+#+END_SRC
+
+---
+
+** PEPs
+PEP \mdash Python Enhancement Proposal.
+https://www.python.org/dev/peps/
+
+https://realpython.com/python-pep8/
+
+- https://pep8.org/#descriptive-naming-styles
+- https://pep8.org/#global-variable-names
+
+---
+
+** (Не)интеркативный режим
+
+---
+
+Введите в консоли:
+#+BEGIN_SRC python
+  10
+#+END_SRC
+
+Получите ли Вы что-то в ответ? Если да, то что?
+
+Напишите то же самое в скрипте. Будет ли результат таким же?
+
+/Для корректной работы скрипта в его конец необходимо добавить:/
+
+#+BEGIN_SRC python
+input("Нажмите Enter, чтобы выйти")
+#+END_SRC
+
+---
+
+** Приоритет операторов
+
+~()~    *>*    ~**~    *>*    ~*~ ~/~    *>*    ~+~ \minus
+
+---
+
+** Комментарии
+
+---
+
+** Отладка
+
+- Syntax error 
+- Runtime error 
+- Semantic error

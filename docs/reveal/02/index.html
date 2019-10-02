@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Основы программирования на языке Python</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/python/reveal-js/css/reveal.css"><link rel="stylesheet" href="/python/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/python/highlight-js/default.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+<section>
+
+<h2 id="занятие-2">Занятие №2</h2>
+
+<p>Переменные, выражения, инструкции</p>
+
+</section><section>
+
+<h3 id="текстовый-редактор">Текстовый редактор</h3>
+
+<ul>
+<li><a href="https://www.slant.co/topics/12/~best-programming-text-editors">https://www.slant.co/topics/12/~best-programming-text-editors</a></li>
+<li><a href="https://insights.stackoverflow.com/survey/2019#development-environments-and-tools">https://insights.stackoverflow.com/survey/2019#development-environments-and-tools</a></li>
+<li><a href="https://github.com/collections/text-editors">https://github.com/collections/text-editors</a></li>
+</ul>
+
+</section><section>
+
+<ul>
+<li>VS Code</li>
+<li>Atom</li>
+<li>Emacs</li>
+<li>Vim</li>
+</ul>
+
+</section><section>
+
+<h3 id="значения-выражения-и-инструкции">Значения, выражения и инструкции</h3>
+
+<p><strong>Структура кода:</strong></p>
+
+<p>инструкции</p>
+
+<p>↑</p>
+
+<p>выражения</p>
+
+<p>↑</p>
+
+<p>значения, переменные и операторы</p>
+
+</section><section>
+
+<h3 id="документация">Документация</h3>
+
+<p><a href="https://docs.python.org/3/index.html">https://docs.python.org/3/index.html</a></p>
+
+<p>Главные разделы:</p>
+
+<ul>
+<li>What&rsquo;s new</li>
+<li>Library Reference</li>
+<li>Language Reference</li>
+</ul>
+
+</section><section>
+
+<h3 id="значения">Значения</h3>
+
+<p><a href="https://docs.python.org/3/reference/datamodel.html#objects-values-and-types">https://docs.python.org/3/reference/datamodel.html#objects-values-and-types</a></p>
+
+<blockquote>
+<p>An object’s type &hellip; defines the possible values for objects of that type.</p>
+</blockquote>
+
+<!--quoteend-->
+
+<blockquote>
+<p>The value of some objects can change.</p>
+</blockquote>
+
+</section><section>
+
+<h3 id="выражения">Выражения</h3>
+
+<p><a href="https://docs.python.org/3/reference/expressions.html">https://docs.python.org/3/reference/expressions.html</a></p>
+
+</section><section>
+
+<h3 id="инструкции">Инструкции</h3>
+
+<p><a href="https://docs.python.org/3/reference/simple%5Fstmts.html#simple-statements">https://docs.python.org/3/reference/simple%5Fstmts.html#simple-statements</a></p>
+
+</section><section>
+
+<h3 id="инструкция-присваивания--assignment-statement">Инструкция присваивания (assignment statement)</h3>
+
+<p><a href="https://docs.python.org/3/reference/simple%5Fstmts.html#assignment-statements">https://docs.python.org/3/reference/simple%5Fstmts.html#assignment-statements</a></p>
+
+<p>Инструкция присваивания создает переменную и <em>присваивает</em> ей значение.</p>
+
+<p><code>имя_переменной = значение</code></p>
+
+<p>По правилам составления имен см. PEP8.</p>
+
+</section><section>
+
+<pre><code class="language-python">help_message = 'Если Вы хотите прервать выполнение программы, '
+	       + 'то нажмите Ctrl-C'
+height = 10
+width = 5.5
+</code></pre>
+
+</section><section>
+
+<h3 id="peps">PEPs</h3>
+
+<p>PEP &mdash; Python Enhancement Proposal.
+<a href="https://www.python.org/dev/peps/">https://www.python.org/dev/peps/</a></p>
+
+<p><a href="https://realpython.com/python-pep8/">https://realpython.com/python-pep8/</a></p>
+
+<ul>
+<li><a href="https://pep8.org/#descriptive-naming-styles">https://pep8.org/#descriptive-naming-styles</a></li>
+<li><a href="https://pep8.org/#global-variable-names">https://pep8.org/#global-variable-names</a></li>
+</ul>
+
+</section><section>
+
+<h3 id="не--интеркативный-режим">(Не)интеркативный режим</h3>
+
+</section><section>
+
+<p>Введите в консоли:</p>
+
+<pre><code class="language-python">10
+</code></pre>
+
+<p>Получите ли Вы что-то в ответ? Если да, то что?</p>
+
+<p>Напишите то же самое в скрипте. Будет ли результат таким же?</p>
+
+<p><em>Для корректной работы скрипта в его конец необходимо добавить:</em></p>
+
+<pre><code class="language-python">input(&quot;Нажмите Enter, чтобы выйти&quot;)
+</code></pre>
+
+</section><section>
+
+<h3 id="приоритет-операторов">Приоритет операторов</h3>
+
+<p><code>()</code>    <strong>&gt;</strong>    <code>**</code>    <strong>&gt;</strong>    <code>*</code> <code>/</code>    <strong>&gt;</strong>    <code>+</code> &minus;</p>
+
+</section><section>
+
+<h3 id="комментарии">Комментарии</h3>
+
+</section><section>
+
+<h3 id="отладка">Отладка</h3>
+
+<ul>
+<li>Syntax error</li>
+<li>Runtime error</li>
+<li>Semantic error</li>
+</ul>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/python/reveal-hugo/object-assign.js></script>
+
+<a href="/python/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/python/reveal-js/lib/js/head.min.js"></script>
+<script src="/python/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+<script type="text/javascript" src="/python/reveal-js/lib/js/classList.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/marked.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/markdown.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/highlight/highlight.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/zoom-js/zoom.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+<script type="text/javascript">
+if (hljs)
+  hljs.initHighlightingOnLoad();
+</script>
+    
+    
+  </body>
+</html>
