@@ -158,3 +158,12 @@ input("Нажмите Enter, чтобы выйти")
 -   Syntax error
 -   Runtime error
 -   Semantic error
+
+---
+
+
+### Дополнительно {#дополнительно}
+
+-   `dir()`
+-   `help()`
+-   Standard Library
