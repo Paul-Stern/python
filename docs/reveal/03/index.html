@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Основы программирования на языке Python</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/python/reveal-js/css/reveal.css"><link rel="stylesheet" href="/python/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/python/highlight-js/default.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+<section>
+
+<h2 id="занятие-3">Занятие №3</h2>
+
+<p>Функции</p>
+
+</section><section>
+
+<p>Что такое функция?</p>
+
+</section><section>
+
+<p>Какие функции мы уже рассматривали?</p>
+
+</section><section>
+
+<h3 id="понятие">Понятие</h3>
+
+<p>В программировании, функция &mdash; это последовательность совершающих вычисление инструкций, имеющая имя.</p>
+
+</section><section>
+
+<h3 id="вызов-функций">Вызов функций</h3>
+
+<pre><code class="language-text">имя_функции(аргумент1, аргумент2, ...)
+</code></pre>
+
+</section><section>
+
+<pre><code class="language-python">&gt;&gt;&gt; type(42)
+&lt;class 'int'&gt;
+</code></pre>
+
+<p>Имя функции, аргумент, возвращаемое значение (return value)</p>
+
+</section><section>
+
+<h3 id="математические-функции">Математические функции</h3>
+
+<p>Подключение модуля:</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; import math
+</code></pre>
+
+<p>Инструкция импорта.</p>
+
+<p>Объект-модуль</p>
+
+</section><section>
+
+<p>Dot notation (запись с точками):</p>
+
+<p><code>math.pi</code> и <code>math.sqrt()</code></p>
+
+</section><section>
+
+<h3 id="композиция">Композиция</h3>
+
+<p>Аргументом функции может быть любое выражение.</p>
+
+<pre><code class="language-python">print(dir(math))
+</code></pre>
+
+<pre><code class="language-python">minutes = hours * 60
+</code></pre>
+
+</section><section>
+
+<h3 id="создание-новых-функций">Создание новых функций</h3>
+
+<p><a href="https://docs.python.org/3/reference/compound%5Fstmts.html#function-definitions">https://docs.python.org/3/reference/compound%5Fstmts.html#function-definitions</a></p>
+
+<pre><code class="language-text">funcdef       ::=  [decorators] &quot;def&quot; funcname &quot;(&quot; [parameter_list] &quot;)&quot;
+                   [&quot;-&gt;&quot; expression] &quot;:&quot; suite
+</code></pre>
+
+<pre><code class="language-text">Определение функции       ::=  &quot;def&quot; имя_функции &quot;(&quot; [список_аргументов] &quot;)&quot;
+                    &quot;:&quot; список инструкций
+</code></pre>
+
+</section><section>
+
+<pre><code class="language-python">def print_something():
+    print('Я печатаю некоторый текст')
+    print('на двух строчках.')
+</code></pre>
+
+<p>Пустые скобки означают, что функция не принимает аргументов.</p>
+
+<p>Заголовок и тело функции.</p>
+
+<p>Тело начинается с отступа. Отступ &mdash; 4 пробела. Тело может содержать любое количество инструкций.</p>
+
+</section><section>
+
+<pre><code class="language-python">&gt;&gt;&gt; print(print_something)
+&gt;&gt;&gt; type(print_something)
+</code></pre>
+
+</section><section>
+
+<p>Вызывать новые функции можно так же, как и встроенные.</p>
+
+</section><section>
+
+<p>После определения, новые функции можно использовать в других функциях.</p>
+
+<pre><code class="language-python">def repeat_something():
+    print_something()
+    print_something()
+</code></pre>
+
+<pre><code class="language-python">&gt;&gt;&gt; repeat_something()
+</code></pre>
+
+</section><section>
+
+<h3 id="определение-и-использование-функций">Определение и использование функций</h3>
+
+<pre><code class="language-python">def print_something():
+    print('Я печатаю некоторый текст')
+    print('на двух строчках.')
+
+def repeat_something():
+    print_something()
+    print_something()
+
+repeat_something()
+</code></pre>
+
+</section><section>
+
+<p>Инструкции внутри функции не выполняются до ее вызова. Прежде чем использовать функции, их необходимо создать.</p>
+
+</section><section>
+
+<h3 id="аргументы-и-параметры">Аргументы и параметры</h3>
+
+<pre><code class="language-python">def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+</code></pre>
+
+</section><section>
+
+<p>Переменные и параметры локальны.</p>
+
+<pre><code class="language-python">def cat_twice(part1, part2):
+    cat = part1 + part2
+    print_twice(cat)
+</code></pre>
+
+</section><section>
+
+<pre><code class="language-python">&gt;&gt;&gt; line1 = 'Bing tiddle '
+&gt;&gt;&gt; line2 = 'tiddle bang.'
+&gt;&gt;&gt; cat_twice(line1, line2)
+</code></pre>
+
+<pre><code class="language-python">&gt;&gt;&gt; print(cat)
+</code></pre>
+
+</section><section>
+
+<p>Не все функции возвращают какое-то значение</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; result = print_twice('Bing')
+Bing
+Bing
+&gt;&gt;&gt; print(result)
+None
+</code></pre>
+
+</section><section>
+
+<h3 id="задачи">Задачи</h3>
+
+</section><section>
+
+<h3 id="1">№1</h3>
+
+<p>Напишите функцию <code>right_justify</code>, которая принимает строку, названную <code>s</code> в качестве аргумента и выводит в консоль строку с достаточным количеством пробелов перед ней, таким образом, что ее последний символ находится в 70-ом столбце дисплея.</p>
+
+</section><section>
+
+<h3 id="2">№2</h3>
+
+<p>Предисловие.</p>
+
+<p>Объект функция является значением, которое можно назначать переменной или использовать в качестве аргумента других функций. Например, <code>do_twice</code> &mdash; это функция, которая принимает объект функцию в качестве аргумента и вызывает ее дважды:</p>
+
+<pre><code class="language-python">def do_twice(f):
+    f()
+    f()
+</code></pre>
+
+</section><section>
+
+<p>Вот пример, который использует функцию <code>do_twice</code>, чтобы вызвать функцию под названием <code>print_spam</code> дважды:</p>
+
+<pre><code class="language-python">def print_spam():
+    print('spam')
+
+do_twice(print_spam)
+</code></pre>
+
+</section><section>
+
+<p>Задание.</p>
+
+<ol>
+<li>Запишите этот пример в скрипт и протестируйте его</li>
+<li>Измените функцию <code>do_twice</code> так, чтобы она принимала 2 аргумента: объект-функцию и значение &mdash; и вызывала эту функцию дважды, передавая указанное значение в качестве ее аргумента.</li>
+<li>Скопируйте определение функции <code>print_twice</code> из сегодняшнего урока в текущий скрипт.</li>
+</ol>
+
+</section><section>
+
+<ol class="org-ol">
+<li value="4">Используйте измененную версию `do_twice`, чтобы вызвать `print_twice` дважды, передавая ей `'spam'` в качестве аргумента</li>
+<li>Определите новую функцию под названием `do_four`, которая принимает объект-функцию и значение в качестве аргументов, и вызывает эту функцию 4 раза с этим значением в качестве аргумента. В теле функции `do_four` должно быть только 2 инструкции, а не 4.</li>
+</ol>
+
+</section><section>
+
+<h3 id="3">№3</h3>
+
+<p>Напишите функцию, рисующую следующую таблицу:</p>
+
+<pre><code class="language-text">+ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+</code></pre>
+
+</section><section>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/python/reveal-hugo/object-assign.js></script>
+
+<a href="/python/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/python/reveal-js/lib/js/head.min.js"></script>
+<script src="/python/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+<script type="text/javascript" src="/python/reveal-js/lib/js/classList.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/marked.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/markdown/markdown.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/highlight/highlight.js"></script>
+
+<script type="text/javascript" src="/python/reveal-js/plugin/zoom-js/zoom.js"></script>
+
+
+<script type="text/javascript" src="/python/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+<script type="text/javascript">
+if (hljs)
+  hljs.initHighlightingOnLoad();
+</script>
+    
+    
+  </body>
+</html>
