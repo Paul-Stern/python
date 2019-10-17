@@ -11,32 +11,31 @@
   </url>
   
   <url>
+    <loc>https://paul-stern.github.io/python/reveal/04/</loc>
+  </url>
+  
+  <url>
     <loc>https://paul-stern.github.io/python/reveal/</loc>
   </url>
   
   <url>
     <loc>https://paul-stern.github.io/python/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://paul-stern.github.io/python/tags/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://paul-stern.github.io/python/tags/logos/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://paul-stern.github.io/python/tags/python/</loc>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://paul-stern.github.io/python/tags/</loc>
   </url>
   
   <url>
     <loc>https://paul-stern.github.io/python/tags/teaching/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
